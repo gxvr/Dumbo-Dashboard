@@ -59,6 +59,9 @@
     color: #ffffff;
 }
 
+.text-dark {
+    color: #8c8c8c;
+}
 
 /* --------------------------
  * Structure
@@ -217,6 +220,11 @@ input:focus {
     stroke-dashoffset: 0;
 }
 
+::placeholder {
+    color: #b4b4b4 !important;
+    opacity: 1 !important;
+}
+
 .inline-svg {
     position: absolute;
     width: 0;
@@ -224,6 +232,8 @@ input:focus {
     pointer-events: none;
     user-select: none;
 }
+
+
 
 /* --------------------------
  * 5. Cards
