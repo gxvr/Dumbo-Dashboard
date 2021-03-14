@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumbo Dashboard - UI Charts</title>
+    <!-- favion -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/">
+    <!-- include bootstrap css -->
+    <link media="all" rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+    <!-- include main css -->
+    <link media="all" rel="stylesheet" href="assets/css/main.css">
+    <!-- include font css -->
+    <link media="all" rel="stylesheet" href="assets/fonts/font.css">
+    <!-- include apexcharts css -->
+    <link media="all" rel="stylesheet" href="assets/vendors/apexcharts/css/apexcharts.css">
+</head>
+
+<body class="bg-light">
+    <div class="container pt-4">
+        <div class="row">
+            <!-- Chart Card 01 -->
+            <div class="col-md-5">
+                <div class="card bg-white dumbo-card-sm border-0 p-4 pr-5 shadow-sm">
+                    <div class="card-head">
+                        <div class="float-left">
+                            <h5 class="text-dark m-0">Impressions</h5>
+                            <p>Daily engaging on the platform</p>
+                        </div>
+                        <div class="float-right">
+                            <div class="icon-circle primary-orange-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-award">
+                                    <circle cx="12" cy="8" r="7"></circle>
+                                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chartCard1" class="dchart"></div>
+                </div>
+            </div>
+
+            <!-- Chart Card 02 -->
+            <div class="col-md-4">
+                <div class="card bg-white dumbo-card-sm border-0 p-4 pr-5 shadow-sm">
+                    <div class="card-head">
+                        <h5 class="text-dark float-left">Performance</h5>
+                        <div class="badge custom-badge-success p-2 float-right">+34%</div>
+                    </div>
+                    <div id="chartCard2" class="dchart"></div>
+                </div>
+            </div>
+
+            <!-- Chart Card 03 -->
+            <div class="col-md-3">
+                <div class="card bg-white dumbo-card-sm border-0 shadow-sm overflow-hidden">
+                    <div class="card-head p-4">
+                        <span class="m-0">Balance</span>
+                        <h5 class="text-dark m-0">$14 993</h5>
+                        <span class="m-0"><span class="primary-green">+$324</span> (today)</span>
+                    </div>
+                    <div id="chartCard3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- include jquery js-->
+<script src="assets/vendors/jquery/jquery.min.js"></script>
+<!-- include bootstrap js-->
+<script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+<!-- include apexcharts js-->
+<script src="assets/vendors/apexcharts/js/apexcharts.min.js"></script>
+<!-- include charts js-->
+<script src="assets/js/charts.js"></script>
+<!-- include main js-->
+<script src="assets/js/main.js"></script>
+
+</html>

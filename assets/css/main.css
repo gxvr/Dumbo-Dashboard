@@ -23,11 +23,6 @@
 */
 
 
-/* --------------------------
- * Fonts
- * -------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
-
 
 /* --------------------------
  * Colors
@@ -57,6 +52,10 @@
 .primary-green-dark-bg {
     background-color: #008D18;
     color: #ffffff;
+}
+
+.primary-orange-bg {
+    background-color: #ffb000;
 }
 
 .text-dark {
@@ -97,12 +96,19 @@ body {
  * -------------------------- */
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
     color: #636363;
     font-weight: 700;
+}
+
+h5,
+h6,
+h4 {
+    font-weight: 600;
+}
+
+span {
+    font-size: 14px;
 }
 
 /* --------------------------
@@ -244,9 +250,57 @@ input:focus {
     z-index: 10;
 }
 
+.dumbo-card-sm {
+    border-radius: 8px;
+}
+
+
 /* --------------------------
- * 6. Misc
+ * 6. Chart
  * -------------------------- */
+.dchart {
+    margin: 0px -20px;
+}
+
+.apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
+    clip-path: inset(0% 0% -100% 10% round 10px);
+}
+
+.apexcharts-xaxis-tick {
+    display: none;
+}
+
+
+/* --------------------------
+ * 7. Icons
+ * -------------------------- */
+.icon-circle {
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon-circle svg {
+    margin: 12.5px;
+}
+
+
+/* --------------------------
+ * 8. Misc
+ * -------------------------- */
+.custom-badge-danger {
+    color: #dc4545;
+    background-color: #fae8e9;
+    border-radius: 100px;
+}
+
+.custom-badge-success {
+    background-color: #d6f1bd;
+    color: #62BE00;
+    border-radius: 100px;
+    padding: 8px 10px;
+}
+
 .illu {
     width: 300px;
     top: 175px;
