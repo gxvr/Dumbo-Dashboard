@@ -23,7 +23,6 @@
 */
 
 
-
 /* --------------------------
  * Colors
  * -------------------------- */
@@ -89,7 +88,13 @@ body {
     background-color: #fff;
 }
 
+img {
+    width: 100%;
+}
 
+a {
+    text-decoration: none !important;
+}
 
 /* --------------------------
  * 2. Typography 
@@ -239,8 +244,6 @@ input:focus {
     user-select: none;
 }
 
-
-
 /* --------------------------
  * 5. Cards
  * -------------------------- */
@@ -252,6 +255,10 @@ input:focus {
 
 .dumbo-card-sm {
     border-radius: 8px;
+}
+
+.dumbo-card-sm p {
+    font-size: 13px !important;
 }
 
 
@@ -282,6 +289,27 @@ input:focus {
 
 .icon-circle svg {
     margin: 12.5px;
+}
+
+/* --------------------------
+ * 8. Avatars
+ * -------------------------- */
+.avatar-photo {
+    width: 43px;
+    height: 43px;
+    border-radius: 100px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
+
+.avatar p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.avatar span {
+    font-size: 13px;
 }
 
 
