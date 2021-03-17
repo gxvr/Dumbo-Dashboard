@@ -17,28 +17,34 @@
 </head>
 
 <body class="bg-light">
-    <div class="container">
-
-        <div class="mx-auto mt-5 card dumbo-card border-0 w-40 pt-4 pb-4 p-5 shadow-sm">
-            <div class="mb-2">
-                <h3>Create account</h3>
-                <p>Good to see you back again</p>
+    <div class="container position-relative pt-5">
+        <div class="mx-auto mt-5 mb-5 card dumbo-card border-r-md border-0 w-40 pt-4 pb-4 p-5 shadow-sm text-dark">
+            <div class="avatar-lg border-r-100 position-absolute">
+            </div>
+            <div class="mb-2 mt-3">
+                <h3>Register</h3>
+                <p>Get started by creating an account</p>
             </div>
             <form action="" method="">
                 <div class="form-group">
                     <label for="fullname">Fullname</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" placeholder="Fullname">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" placeholder="Username">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control">
+                    <input type="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control">
+                    <img src="assets/icons/feather/eye.svg" class="input-icon" />
+                    <input type="password" class="form-control" placeholder="6 characters and more">
                 </div>
 
-                <button type="submit" class="btn btn-block mt-4 dumbo-btn">Register</button>
+                <button type="submit" class="btn btn-block mt-4 dumbo-btn primary-green-bg">Register</button>
             </form>
             <p class="mt-4 text-center">
                 Already have an account? <a href="login-1.html"> Login</a>

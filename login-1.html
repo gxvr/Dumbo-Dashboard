@@ -20,19 +20,20 @@
 
     <!-- Login -->
     <div class="container position-relative">
-        <div class="mx-auto mt-5 card bg-white dumbo-card border-0 w-40 p-5 shadow-sm text-dark">
+        <div class="mx-auto mt-5 card bg-white dumbo-card border-r-md border-0 w-40 p-5 shadow-sm text-dark">
             <div class="mb-2">
                 <h3>Login</h3>
-                <p>Good to see you back again</p>
+                <p>Welcome back, good to see you again</p>
             </div>
             <form action="" method="">
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" name="" id="" placeholder="user@example.com" class="form-control">
+                    <input type="email" name="" id="" placeholder="Email" class="form-control">
                 </div>
-                <div class="form-group">
+                <div class="form-group position-relative">
                     <label for="password">Password</label>
-                    <input type="password" name="" id="" class="form-control">
+                    <img src="assets/icons/feather/eye.svg" class="input-icon" />
+                    <input type="password" name="" id="" placeholder="Password" class="form-control">
                 </div>
                 <div class="form-group">
                     <input type="checkbox" class="dumbo-cb" name="" id="remember" />
@@ -42,16 +43,16 @@
                                 <use xlink:href="#check"></use>
                             </svg>
                         </span>
-                        <span>Remember Me</span>
+                        <span>Remember me</span>
                     </label>
                     <svg class="inline-svg">
                         <symbol id="check" viewbox="0 0 12 10">
                             <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                         </symbol>
                     </svg>
-                    <a href="" class="float-right">Forgot password?</a>
+                    <a href="forgot-password.html" class="float-right">Forgot your password?</a>
                 </div>
-                <button type="submit" class="btn btn-block mt-4 dumbo-btn">Log in</button>
+                <button type="submit" class="btn btn-block mt-4 dumbo-btn primary-green-bg">Log in</button>
             </form>
             <p class="mt-4 text-center">
                 Don't have account yet? <a href="register-1.html">Create account</a>

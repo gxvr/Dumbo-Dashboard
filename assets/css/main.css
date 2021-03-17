@@ -57,6 +57,14 @@
     background-color: #ffb000;
 }
 
+.secondary-dark-gray-bg {
+    background-color: #245a5d;
+}
+
+.bg-warning {
+    background: #f9944a !important;
+}
+
 .text-dark {
     color: #8c8c8c;
 }
@@ -66,11 +74,35 @@
  * -------------------------- */
 
 .w-40 {
-    width: 40% !important;
+    max-width: 450px !important;
 }
 
 label {
     font-size: 14px;
+}
+
+.custom-h-lg {
+    height: 366px;
+}
+
+.custom-h-md {
+    height: 200px;
+}
+
+.border-r-100 {
+    border-radius: 100px;
+}
+
+.border-r-md {
+    border-radius: 15px;
+}
+
+.border-r-sm {
+    border-radius: 8px;
+}
+
+.letters-sp {
+    letter-spacing: .05em;
 }
 
 /* --------------------------
@@ -88,9 +120,6 @@ body {
     background-color: #fff;
 }
 
-img {
-    width: 100%;
-}
 
 a {
     text-decoration: none !important;
@@ -113,8 +142,10 @@ h4 {
 }
 
 span {
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: 500;
 }
+
 
 /* --------------------------
  * 3. Buttons
@@ -122,26 +153,24 @@ span {
 
 .dumbo-btn {
     padding: 10px 70px;
-    background-color: #62BE00;
-    color: #ffffff;
     border-radius: 100px;
     font-weight: 500;
     border: 0px;
 }
 
-.dumbo-btn:hover {
+.dumbo-btn-sm {
+    font-size: .875rem;
+    line-height: 1.5em;
+    border-radius: 100px;
+}
+
+.dumbo-btn:hover,
+.dumbo-btn-sm:hover {
     background-color: #6aca03;
     color: #ffffff;
 }
 
-.dumbo-btn-disabled {
-    padding: 10px 70px;
-    background-color: #A0A7A9;
-    color: #f0f0f0;
-    border-radius: 100px;
-    font-weight: 500;
-    border: 0px;
-}
+
 
 /* --------------------------
  * 4. Forms
@@ -158,6 +187,26 @@ input {
 input:active,
 input:focus {
     border: 1px solid #62BE00 !important;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group>.input-icon {
+    position: absolute;
+    top: 42px;
+    right: 15px;
+    opacity: 0.6;
+    width: 20px;
+    height: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.form-group>input {
+    padding-left: 40px;
 }
 
 .checkbox-label {
@@ -178,6 +227,7 @@ input:focus {
     float: left;
     vertical-align: middle;
     transform: translate3d(0, 0, 0);
+    font-size: .900rem;
 }
 
 .checkbox-label span:first-child {
@@ -234,6 +284,7 @@ input:focus {
 ::placeholder {
     color: #b4b4b4 !important;
     opacity: 1 !important;
+    font-size: .875rem;
 }
 
 .inline-svg {
@@ -245,20 +296,15 @@ input:focus {
 }
 
 /* --------------------------
- * 5. Cards
+ * 5. Card
  * -------------------------- */
 
 .dumbo-card {
-    border-radius: 15px;
     z-index: 10;
 }
 
-.dumbo-card-sm {
-    border-radius: 8px;
-}
-
-.dumbo-card-sm p {
-    font-size: 13px !important;
+.dumbo-card .illustration {
+    width: 176px !important;
 }
 
 
@@ -269,6 +315,10 @@ input:focus {
     margin: 0px -20px;
 }
 
+.dchart-lg {
+    margin: 0px -50px;
+}
+
 .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
     clip-path: inset(0% 0% -100% 10% round 10px);
 }
@@ -277,12 +327,126 @@ input:focus {
     display: none;
 }
 
+.apexcharts-legend-series {
+    margin: 2px 3px !important;
+    padding: 6px 10px;
+    background-color: #f1f1f1;
+    border-radius: 100px;
+}
+
+.arrow_box {
+    position: relative;
+    background: #223345;
+    padding: 0px 5px;
+    border-radius: 5px;
+    right: 36px;
+}
+
+.arrow_box:after {
+    border-right-color: #223345;
+    border-width: 10px;
+    margin-top: 10px;
+}
+
+.arrow_box:before {
+    border-width: 13px;
+    margin-top: -13px;
+}
+
+#chartCard2 .apexcharts-tooltip {
+    color: #fff;
+    font-weight: 600;
+    transform: translateX(10px) translateY(10px);
+    overflow: visible !important;
+    white-space: normal !important;
+    box-shadow: none !important;
+
+}
+
+#chartCard2 .apexcharts-tooltip span {
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+#chartCard2 .apexcharts-theme-light {
+    background: transparent !important;
+    border: transparent !important;
+}
+
+/* --------------------------
+ * 7. Kanban Board
+ * -------------------------- */
+.board {
+    position: relative;
+    margin-left: 1%;
+}
+
+.board-column {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 30%;
+    margin: 0 1.5%;
+    background: #f0f0f0;
+    border-radius: 3px;
+    z-index: 1;
+    will-change: transform;
+}
+
+.board-column.muuri-item-releasing {
+    z-index: 2;
+}
+
+.board-column.muuri-item-dragging {
+    z-index: 3;
+    cursor: move;
+}
+
+.board-column-header {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 0 20px;
+    color: #fff;
+}
+
+
+.board-column-content {
+    position: relative;
+    border: 10px solid transparent;
+    min-height: 150px;
+}
+
+.board-item {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0;
+    will-change: transform;
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.board-item.muuri-item-releasing {
+    z-index: 9998;
+}
+
+.board-item.muuri-item-dragging {
+    z-index: 9999;
+    cursor: move;
+}
+
+.board-item.muuri-item-hidden {
+    z-index: 0;
+}
+
+
 
 /* --------------------------
  * 7. Icons
  * -------------------------- */
 .icon-circle {
-    border-radius: 100px;
     width: 50px;
     height: 50px;
 }
@@ -291,27 +455,66 @@ input:focus {
     margin: 12.5px;
 }
 
+.action-icon {
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.action-icon svg {
+    margin: 4px 5px;
+    width: 15px;
+}
+
+
 /* --------------------------
  * 8. Avatars
  * -------------------------- */
-.avatar-photo {
+.avatar-wrapper p {
+    font-weight: 600;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.avatar-lg {
+    width: 95px;
+    height: 95px;
+    background-color: #f0f0f0;
+    top: -50px;
+    right: 38%;
+    border: 4px solid #fff;
+}
+
+.avatar-md {
     width: 43px;
     height: 43px;
-    border-radius: 100px;
     background-color: #f0f0f0;
     overflow: hidden;
+    border: 2.5px solid #fff;
+}
+
+.avatar-sm {
+    width: 35px;
+    height: 35px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    border: 2.5px solid #fff;
+}
+
+.avatar-sm svg {
+    margin: 6.5px;
+}
+
+.online {
+    width: 10px;
+    height: 10px;
+    top: 29px;
+    left: 33px;
     border: 2px solid #fff;
 }
-
-.avatar p {
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.avatar span {
-    font-size: 13px;
-}
-
 
 /* --------------------------
  * 8. Misc
@@ -319,14 +522,22 @@ input:focus {
 .custom-badge-danger {
     color: #dc4545;
     background-color: #fae8e9;
-    border-radius: 100px;
 }
 
 .custom-badge-success {
     background-color: #d6f1bd;
     color: #62BE00;
-    border-radius: 100px;
     padding: 8px 10px;
+    font-weight: 500;
+    border: 1px solid #c2f395;
+}
+
+.custom-badge-warning {
+    background-color: #ffefbe;
+    color: #d6aa27;
+    padding: 8px 10px;
+    font-weight: 500;
+    border: 1px solid #fbe297;
 }
 
 .illu {

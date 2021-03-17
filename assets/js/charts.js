@@ -33,7 +33,7 @@ var chartCard1 = {
         categories: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
         labels: {
             style: {
-                fontSize: '11px',
+                fontSize: '12px',
                 fontWeight: 'normal',
                 color: '#ddd',
                 fontFamily: 'Inter, sans-serif'
@@ -46,16 +46,16 @@ var chartCard1 = {
                 return val + "k"
             },
             style: {
-                fontSize: '11px',
+                fontSize: '12px',
                 fontWeight: 'normal',
                 color: '#ddd',
                 fontFamily: 'Inter, sans-serif'
             },
         }
     },
-     tooltip: {
+    tooltip: {
         style: {
-            fontSize: '11px',
+            fontSize: '12px',
             fontWeight: 'normal',
             color: '#ddd',
             fontFamily: 'Inter, sans-serif'
@@ -106,7 +106,7 @@ var chartCard2 = {
         categories: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
         labels: {
             style: {
-                fontSize: '11px',
+                fontSize: '12px',
                 fontWeight: 'normal',
                 color: '#ddd',
                 fontFamily: 'Inter, sans-serif'
@@ -119,7 +119,7 @@ var chartCard2 = {
                 return val + "k"
             },
             style: {
-                fontSize: '11px',
+                fontSize: '12px',
                 fontWeight: 'normal',
                 color: '#ddd',
                 fontFamily: 'Inter, sans-serif'
@@ -127,13 +127,16 @@ var chartCard2 = {
         }
     },
     tooltip: {
-        style: {
-            fontSize: '11px',
-            fontWeight: 'normal',
-            color: '#ddd',
-            fontFamily: 'Inter, sans-serif'
-        },
-    },
+    custom: function({ series, seriesIndex, dataPointIndex, w }) {
+      return (
+        '<div class="arrow_box">' +
+        "<span>" + "$" + " " +
+        series[seriesIndex][dataPointIndex] + "k" +
+        "</span>" +
+        "</div>"
+      );
+    }
+  },
     fill: {
         opacity: 1
     },
@@ -144,7 +147,7 @@ var chartCard2 = {
 
 var chartCard3 = {
     chart: {
-        height: 130,
+        height: 100,
         type: "area",
         toolbar: {
             show: false
@@ -169,7 +172,7 @@ var chartCard3 = {
     },
     series: [{
         name: "Series 1",
-        data: [30, 30, 40, 40, 44, 43, 43, 49],
+        data: [50, 50, 100],
     }],
     fill: {
         type: "gradient",
@@ -196,11 +199,70 @@ var chartCard3 = {
     tooltip: {
         enabled: false,
     }
+};
 
-
+var chartCard4 = {
+    series: [44, 55, 13],
+    chart: {
+        width: 390,
+        type: 'donut',
+    },
+    labels: ['Instagram', 'Tiktok', 'Twitter'],
+    colors: ['#62BE00', '#ffb000', '#ff4560'],
+    stroke: {
+        show: false,
+    },
+    plotOptions: {
+        pie: {
+            donut: {
+                size: '75%',
+                background: 'transparent',
+                labels: {
+                    show: true,
+                    total: {
+                        show: true,
+                        showAlways: true,
+                        label: 'Impressions',
+                        fontFamily: 'Inter, sans-serif',
+                        formatter: function (w) {
+                            return w.globals.seriesTotals.reduce((a, b) => {
+                                return a + b
+                            }, 0)
+                        }
+                    },
+                    value: {
+                        show: true,
+                        fontSize: '26px',
+                        fontFamily: 'Inter, sans-serif',
+                        fontWeight: 600,
+                        color: undefined,
+                        formatter: function (val) {
+                            return val
+                        }
+                    },
+                }
+            }
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    legend: {
+        position: 'bottom',
+        offsetY: 0,
+    },
+    tooltip: {
+        style: {
+            fontSize: '12px',
+            fontWeight: 'normal',
+            color: '#ddd',
+            fontFamily: 'Inter, sans-serif'
+        },
+    },
 };
 
 
 new ApexCharts(document.querySelector("#chartCard1"), chartCard1).render();
 new ApexCharts(document.querySelector("#chartCard2"), chartCard2).render();
 new ApexCharts(document.querySelector("#chartCard3"), chartCard3).render();
+new ApexCharts(document.querySelector("#chartCard4"), chartCard4).render();
