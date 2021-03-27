@@ -170,14 +170,15 @@ span {
     color: #ffffff;
 }
 
-
-
 /* --------------------------
  * 4. Forms
  * -------------------------- */
-input {
+input,
+textarea,
+select {
     border-radius: 7px !important;
     background-color: #f8f8f8 !important;
+    color: black !important;
     border: 1px solid #ececec !important;
     outline: 0px !important;
     box-shadow: none !important;
@@ -304,7 +305,7 @@ input:focus {
 }
 
 .dumbo-card .illustration {
-    width: 176px !important;
+    width: 140px !important;
 }
 
 
@@ -371,6 +372,39 @@ input:focus {
 #chartCard2 .apexcharts-theme-light {
     background: transparent !important;
     border: transparent !important;
+}
+
+/* --------------------------
+ * 7. Owl Carousel
+ * -------------------------- */
+
+.owl-carousel .owl-nav {
+    display: none;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-carousel .owl-dots {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 85%;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 6px !important;
+    height: 6px !important;
+    background: #ffffff5d;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #ffffff;
+    width: 20px !important;
 }
 
 /* --------------------------
@@ -465,6 +499,15 @@ input:focus {
     width: 15px;
 }
 
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+.dropdown-item {
+    padding: .10rem 1.5rem !important;
+    font-size: 14.5px !important;
+}
 
 /* --------------------------
  * 8. Avatars
@@ -484,8 +527,11 @@ input:focus {
     height: 95px;
     background-color: #f0f0f0;
     top: -50px;
-    right: 38%;
+    left: 50%;
+    margin-left: -50px;
     border: 4px solid #fff;
+    height: 100px;
+    width: 100px;
 }
 
 .avatar-md {

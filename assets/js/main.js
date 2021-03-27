@@ -12,38 +12,38 @@ document.addEventListener('DOMContentLoaded', function () {
   itemContainers.forEach(function (container) {
 
     var muuri = new Muuri(container, {
-      items: '.board-item',
-      layoutDuration: 400,
-      layoutEasing: 'ease',
-      dragEnabled: true,
-      dragSortInterval: 0,
-      dragSortGroup: 'column',
-      dragSortWith: 'column',
-      dragContainer: document.body,
-      dragReleaseDuration: 400,
-      dragReleaseEasing: 'ease'
-    })
-    .on('dragStart', function (item) {
-      ++dragCounter;
-      docElem.classList.add('dragging');
-      item.getElement().style.width = item.getWidth() + 'px';
-      item.getElement().style.height = item.getHeight() + 'px';
-    })
-    .on('dragEnd', function (item) {
-      if (--dragCounter < 1) {
-        docElem.classList.remove('dragging');
-      }
-    })
-    .on('dragReleaseEnd', function (item) {
-      item.getElement().style.width = '';
-      item.getElement().style.height = '';
-      columnGrids.forEach(function (muuri) {
-        muuri.refreshItems();
+        items: '.board-item',
+        layoutDuration: 400,
+        layoutEasing: 'ease',
+        dragEnabled: true,
+        dragSortInterval: 0,
+        dragSortGroup: 'column',
+        dragSortWith: 'column',
+        dragContainer: document.body,
+        dragReleaseDuration: 400,
+        dragReleaseEasing: 'ease'
+      })
+      .on('dragStart', function (item) {
+        ++dragCounter;
+        docElem.classList.add('dragging');
+        item.getElement().style.width = item.getWidth() + 'px';
+        item.getElement().style.height = item.getHeight() + 'px';
+      })
+      .on('dragEnd', function (item) {
+        if (--dragCounter < 1) {
+          docElem.classList.remove('dragging');
+        }
+      })
+      .on('dragReleaseEnd', function (item) {
+        item.getElement().style.width = '';
+        item.getElement().style.height = '';
+        columnGrids.forEach(function (muuri) {
+          muuri.refreshItems();
+        });
+      })
+      .on('layoutStart', function () {
+        boardGrid.refreshItems().layout();
       });
-    })
-    .on('layoutStart', function () {
-      boardGrid.refreshItems().layout();
-    });
 
     columnGrids.push(muuri);
 
@@ -62,3 +62,18 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
+// Owl Carousel
+$('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: false,
+  responsive: {
+    0: {
+      items: 1
+    }
+  }
+})
