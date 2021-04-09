@@ -105,11 +105,18 @@ label {
     letter-spacing: .05em;
 }
 
+
+
 /* --------------------------
  * 1. Global
  * -------------------------- */
 * {
     box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
 }
 
 body {
@@ -179,7 +186,7 @@ select {
     border-radius: 7px !important;
     background-color: #f8f8f8 !important;
     color: black !important;
-    border: 1px solid #ececec !important;
+    border: 1.5px solid #d0d0d0 !important;
     outline: 0px !important;
     box-shadow: none !important;
     padding: 20px 15px !important;
@@ -187,7 +194,7 @@ select {
 
 input:active,
 input:focus {
-    border: 1px solid #62BE00 !important;
+    border: 1.5px solid #62BE00 !important;
 }
 
 .form-group {
@@ -283,7 +290,7 @@ input:focus {
 }
 
 ::placeholder {
-    color: #b4b4b4 !important;
+    color: #858585 !important;
     opacity: 1 !important;
     font-size: .875rem;
 }
@@ -503,7 +510,6 @@ input:focus {
     display: none;
 }
 
-
 .dropdown-item {
     padding: .10rem 1.5rem !important;
     font-size: 14.5px !important;
@@ -565,6 +571,10 @@ input:focus {
 /* --------------------------
  * 8. Misc
  * -------------------------- */
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .custom-badge-danger {
     color: #dc4545;
     background-color: #fae8e9;

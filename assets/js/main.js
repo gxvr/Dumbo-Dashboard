@@ -1,3 +1,12 @@
+// Password Visibilty
+function showPassword() {
+  var x = document.getElementById("myPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
 // Kanban Board
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -77,3 +86,5 @@ $('.owl-carousel').owlCarousel({
     }
   }
 })
+
+

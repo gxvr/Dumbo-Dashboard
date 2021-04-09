@@ -40,8 +40,9 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" placeholder="6 characters and more">
-                    <img src="assets/icons/feather/eye.svg" class="input-icon" />
+                    <input type="password" class="form-control" placeholder="6 characters and more" id="myPassword">
+                    <img src="assets/icons/feather/eye.svg" class="input-icon cursor-pointer"
+                        onclick="showPassword()" />
                 </div>
 
                 <button type="submit" class="btn btn-block mt-4 dumbo-btn primary-green-bg">Register</button>
@@ -52,5 +53,14 @@
         </div>
     </div>
 </body>
+
+<!-- include jquery js-->
+<script src="assets/vendors/jquery/jquery.min.js"></script>
+<!-- include popper js-->
+<script src="assets/vendors/bootstrap/js/popper.min.js"></script>
+<!-- include bootstrap js-->
+<script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+<!-- include main js-->
+<script src="assets/js/main.js"></script>
 
 </html>
